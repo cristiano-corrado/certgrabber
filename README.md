@@ -47,7 +47,7 @@ Below a description of the field of the database and the data that the headers r
 | *expired* | if certificate is expired | True/False|
 | *notAfter* | Evidence of certificate expired | Nov  2 00:00:40 2015 GMT |
 | *cert_calid* | if the certificate is valid or not | True/False|
-| *signatureAlg* | The signature algorithm specified when creating the CSR corresponds to the message digest used to sign the request itself|
+| *signatureAlg* | The signature algorithm specified when creating the CSR corresponds to the message digest used to sign the request itself|sha1WithRSAEncryption|
 
 ## Tools to make the data more human readable 
 
