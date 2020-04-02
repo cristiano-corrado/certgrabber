@@ -58,3 +58,4 @@ I use [DB Browser for SQLite](https://sqlitebrowser.org/dl/)
 
 * Resume scan on abort
 * Pass programmatically different port / list of ports.
+* Handling KeyBoardInterrupt better.

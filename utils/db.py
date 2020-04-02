@@ -4,6 +4,8 @@ from utils.logger import logging
 
 class Datastore(object):
     """sqlite3 database class that holds testers jobs"""
+    if not os.path.exists("db/"):
+        os.mkdir("db")
     __DB_LOCATION = "db/certs.sqlite3"
 
     def __enter__(self):
@@ -45,15 +47,6 @@ class Datastore(object):
         logging.info("[DB] Inserted to DB: {}".format(host))
         self.cur.execute(insertdb)
 
-
-    def delete(self,repo):
-        deletedb = "DELETE FROM certgrabbers WHERE ip = '{}'".format(host)
-        
-        self.cur.execute(deletedb)
-
-    def executemany(self, many_new_data):
-        self.create_table()
-        self.cur.executemany('REPLACE INTO jobs VALUES(?, ?, ?, ?)', many_new_data)
 
     def create_table(self):
         """create a database table if it does not exist already"""
